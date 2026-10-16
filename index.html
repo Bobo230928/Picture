@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+    <style>
+      #image {
+        align-items: center;
+        background-color: #e8e8e8;
+        background-position: center;
+        background-size: cover;
+        border: 2px solid #222;
+        color: #222;
+        display: flex;
+        font-size: 1.25rem;
+        height: 300px;
+        justify-content: center;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 400px;
+      }
+
+      img {
+        cursor: pointer;
+        max-height: 200px;
+        max-width: 100%;
+      }
+    </style>
+    <script src="javascript.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Image Preview</h1>
+      <div id="image" role="img" aria-live="polite">
+        Hover over an image below to display here.
+      </div>
+      <img
+        src="image1.jpg"
+        alt="Beautiful Beach"
+        onmouseover="upDate(this)"
+        onmouseout="undo()"
+        onfocus="upDate(this)"
+        onblur="undo()"
+        tabindex="0"
+      >
+    </main>
+  </body>
+</html>
